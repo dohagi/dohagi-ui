@@ -1,0 +1,35 @@
+.wrap {
+    composes: wrap from 'commonCss/common.css';
+}
+
+.top {
+    background: #519cea;
+    color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.title {
+    font-size: 22px;
+}
+
+.small {
+    margin-left: 5px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, .8);
+}
+
+.rightMenu a {
+    margin-left: 10px;
+}
+

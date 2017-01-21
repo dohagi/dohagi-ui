@@ -1,0 +1,98 @@
+.wrap {
+    composes: wrap from 'commonCss/common.css';
+}
+
+.top {
+    padding: 15px 0;
+    background: #519cea;
+    color: #fff;
+}
+
+.header {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.title {
+    font-size: 22px;
+}
+
+.small {
+    margin-left: 5px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, .8);
+}
+
+.rightMenu a {
+    margin-left: 10px;
+}
+
+.questions {
+    margin-top: 50px;
+}
+
+.questionWrap {
+    margin: 30px 0;
+}
+
+.inlineQuestionWrap {
+    composes: questionWrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inlineQuestionWrap .h1 {
+    margin: 0;
+}
+
+.h1 {
+    margin: 15px 0;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.number {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    color: #519cea;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+    line-height: 32px;
+    margin-right: 10px;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+.buttonWrap button {
+    padding: 0 12px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 20px;
+    border: none;
+    background: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-right: none;
+}
+
+.buttonWrap button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.buttonWrap button:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-right: 1px solid #fff;
+}
