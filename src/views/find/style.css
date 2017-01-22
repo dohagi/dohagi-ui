@@ -3,35 +3,11 @@
 }
 
 .top {
-    padding: 15px 0;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 15px;
     background: #519cea;
     color: #fff;
-}
-
-.header {
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.title {
-    font-size: 22px;
-}
-
-.small {
-    margin-left: 5px;
-    font-size: 16px;
-    color: rgba(255, 255, 255, .8);
-}
-
-.rightMenu a {
-    margin-left: 10px;
 }
 
 .questions {
@@ -51,6 +27,11 @@
 
 .inlineQuestionWrap .h1 {
     margin: 0;
+}
+
+.lastQuestionWrap {
+    composes: questionWrap;
+    margin-bottom: 20px;
 }
 
 .h1 {
@@ -74,7 +55,7 @@
     vertical-align: middle;
 }
 
-.buttonWrap button {
+.button {
     padding: 0 12px;
     height: 36px;
     line-height: 36px;
@@ -84,15 +65,65 @@
     color: #fff;
     border: 1px solid #fff;
     border-right: none;
+    transition: color .05s;
 }
 
-.buttonWrap button:first-child {
+.button:first-child {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 
-.buttonWrap button:last-child {
+.button:last-child {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border-right: 1px solid #fff;
+}
+
+.selected {
+    background: #fff;
+    color: #519cea;
+    transition: color .05s;
+}
+
+.enter {
+    visibility: hidden;
+    max-height: 0;
+    opacity: 0;
+}
+
+.enterActive {
+    visibility: visible;
+    opacity: 1;
+    max-height: 350px;
+    transition: opacity .4s .4s, max-height .4s, visibility 0s .4s;
+}
+
+.hr {
+    margin: 0;
+    border: none;
+    border-top: 1px solid #fff;
+}
+
+.submitWrap {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reset {
+    font-size: 24px;
+    padding: 10px 15px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.submit {
+    font-size: 24px;
+    padding: 10px 15px;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    color: #519cea;
 }

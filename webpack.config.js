@@ -2,7 +2,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-    entry: path.join(__dirname, 'src'),
+    entry: [
+        'babel-polyfill',
+        path.join(__dirname, 'src')
+    ],
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'js/bundle.js'
@@ -15,7 +18,7 @@ module.exports = {
                 include: path.join(__dirname, 'src'),
                 query: {
                     presets: ['react', 'es2015', 'stage-0'],
-                    plugins: [['resolver', { resolveDirs: ['src'] }]]
+                    plugins: [['resolver', { resolveDirs: ['src'] }], "transform-async-to-generator"]
                 }
             },
             {
@@ -47,7 +50,7 @@ module.exports = {
     devServer: {
         proxy: {
             '/api/**': {
-                target: 'http://localhost:8000'
+                target: 'http://10.10.10.45:8080'
             }
         }
     },
