@@ -1,4 +1,5 @@
 .wrap {
+    margin-right: 10px;
     width: calc(25% - 10px);
 }
 

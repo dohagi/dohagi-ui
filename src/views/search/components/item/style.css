@@ -30,7 +30,7 @@
 
 .keywords {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
     position: relative;
     flex-wrap: wrap;
